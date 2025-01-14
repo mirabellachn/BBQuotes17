@@ -45,6 +45,7 @@ class ViewModel {
             character.death = try await fetcher.fetchDeath(for: character.name)
 
             status = .success
+            
         } catch {
             status = .failed(error: error)
         }
